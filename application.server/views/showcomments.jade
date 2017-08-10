@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  header.main-header
+  nav.navbar.navbar-static-top#navbar
+    .container
+      .navbar-header
+        a.navbar-brand
+          b Workout
+          | Mate.      
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+          i.fa.fa-bars
+      // Collect the nav links, forms, and other content for toggling
+      #navbar-collapse.collapse.navbar-collapse.pull-left
+        ul.nav.navbar-nav          
+              li#username
+                a #{sessionUser}
+              li
+                a(href="/feed") Feed
+              li
+                a(href="/addpost") Add Posts
+              
+              li
+                a(href="/showcomments") Comments
+              li
+                a(href="/") Logout
+
+  each comments, comment in showcomments  
+    .info-box.bg-blue
+            span.info-box-icon
+                i.ion.ion-ios-chatbubble-outline
+            .info-box-content
+                span.info-box-number #{comments.post} 
+                span.info-box-text by  #{comments.postAddedUser}
+                span.info-box-text commented by #{comments.commentedUser}
+                span.info-box-text  #{comments.comment}
+                        a.btn.btn-info.pull-right(href="/deletecomment/#{comments.comment}") Delete
+              
+          // /.info-box-content   

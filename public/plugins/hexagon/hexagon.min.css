@@ -1,0 +1,50 @@
+/***************************************************************/
+/* Author: db0 (db0company@gmail.com, http://db0.fr/)          */
+/* Sources/Licence: https://github.com/db0company/css-hexagon  */
+/***************************************************************/
+.hexagon-md{color:#fff;text-align:center;font-size:44.8px;margin:32px 0;width:110.85125168384px;height:64px;background-color:#ebebeb;position:relative;display:block;}
+.hexagon-md:hover{color:#fff;text-decoration:none}
+.hexagon-md:before,.hexagon-md:after{content:" ";width:0;height:0;position:absolute;border-left:55.42562584192px solid transparent;border-right:55.42562584192px solid transparent;left:0}
+.hexagon-md:before{border-bottom:32px solid #ebebeb;top:-32px}
+.hexagon-md:after{border-top:32px solid #ebebeb;bottom:-32px}
+
+.hexagon-primary{background-color:#428bca}
+.hexagon-primary:before{border-bottom-color:#428bca}
+.hexagon-primary:after{border-top-color:#428bca}
+.hexagon-primary.hexagon-hover:hover{background-color:#3276b1}
+.hexagon-primary.hexagon-hover:hover:before{border-bottom-color:#3276b1}
+.hexagon-primary.hexagon-hover:hover:after{border-top-color:#3276b1}
+
+.hexagon-success{background-color:#5cb85c}
+.hexagon-success:before{border-bottom-color:#5cb85c}
+.hexagon-success:after{border-top-color:#5cb85c}
+.hexagon-success.hexagon-hover:hover{background-color:#47a447}
+.hexagon-success.hexagon-hover:hover:before{border-bottom-color:#47a447}
+.hexagon-success.hexagon-hover:hover:after{border-top-color:#47a447}
+
+.hexagon-info{background-color:#5bc0de}
+.hexagon-info:before{border-bottom-color:#5bc0de}
+.hexagon-info:after{border-top-color:#5bc0de}
+.hexagon-info.hexagon-hover:hover{background-color:#39b3d7}
+.hexagon-info.hexagon-hover:hover:before{border-bottom-color:#39b3d7}
+.hexagon-info.hexagon-hover:hover:after{border-top-color:#39b3d7}
+
+.hexagon-warning{background-color:#f0ad4e}
+.hexagon-warning:before{border-bottom-color:#f0ad4e}
+.hexagon-warning:after{border-top-color:#f0ad4e}
+.hexagon-warning.hexagon-hover:hover{background-color:#ed9c28}
+.hexagon-warning.hexagon-hover:hover:before{border-bottom-color:#ed9c28}
+.hexagon-warning.hexagon-hover:hover:after{border-top-color:#ed9c28}
+
+.hexagon-danger{background-color:#d9534f}
+.hexagon-danger:before{border-bottom-color:#d9534f}
+.hexagon-danger:after{border-top-color:#d9534f}
+.hexagon-danger.hexagon-hover:hover{background-color:#d2322d}
+.hexagon-danger.hexagon-hover:hover:before{border-bottom-color:#d2322d}
+.hexagon-danger.hexagon-hover:hover:after{border-top-color:#d2322d}
+.hexagon-inline{display:inline-block}
+
+
+hexa{
+	font-size: 20px;
+}

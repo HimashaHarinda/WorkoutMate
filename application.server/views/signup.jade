@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .login-box
+      .login-logo#applogo
+        a#applogo
+          b Workout
+          | Mate.
+      // /.login-logo
+      .login-box-body
+        form(action='/regUser', method='post')
+          .form-group.has-feedback
+            input.form-control(placeholder='Full Name', type='text', name='fullname')
+            span.glyphicon.glyphicon-user.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(placeholder='Email', type='email', name='email')
+            span.glyphicon.glyphicon-envelope.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(placeholder='Password', type='password', name='password')
+            span.glyphicon.glyphicon-lock.form-control-feedback
+          .row
+            .col-xs-8
+              
+            .col-xs-12
+              button.btn.btn-primary.btn-block.btn-flat(type='submit') Sign In
+            
+        a.text-center#newmember(href='/') Login to start the session
+     

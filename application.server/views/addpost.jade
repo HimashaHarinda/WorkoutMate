@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  header.main-header
+  nav.navbar.navbar-static-top#navbar
+    .container
+      .navbar-header
+        a.navbar-brand
+          b Workout
+          | Mate.      
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+          i.fa.fa-bars
+      // Collect the nav links, forms, and other content for toggling
+      #navbar-collapse.collapse.navbar-collapse.pull-left
+        ul.nav.navbar-nav          
+              li#username
+                a #{sessionUser}
+              li
+                a(href="/feed") Feed
+              li
+                a(href="/addpost") Add Posts
+              
+              li
+                a(href="/showcomments") Comments
+              li
+                a(href="/") Logout
+
+    .col-md-6
+  // Horizontal Form
+  .box.box-info
+    .box-header.with-border
+      h3.box-title Add Post
+    // /.box-header
+    // form start
+    form.form-horizontal(action='/addpostData', method='post')
+      .box-body
+        .form-group
+          label.col-sm-2.control-label(for='Post') Post
+          .col-sm-10
+            input#inputPassword3.form-control(placeholder='Post', type='text', name='post')
+        
+      // /.box-body
+      .box-footer
+        button.btn.btn-info.pull-right(type='submit') Add Post
+
+
+    each posts, post in addpost  
+      .info-box.bg-blue
+            span.info-box-icon
+                i.ion.ion-ios-pricetag-outline
+            .info-box-content
+                span.info-box-number #{posts.post} 
+                span.info-box-text by  #{posts.added_by}
+                span.info-box-text at  #{posts.added_date}
+                    a.btn.btn-info.pull-right(href="/deletepost/#{posts.post}") Delete 
+                
+            // /.info-box-content
